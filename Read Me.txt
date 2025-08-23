@@ -1,0 +1,66 @@
+ICSTAIS2026 Conference Website
+
+This is a complete standalone HTML/CSS/JS project for the International Conference on Secure and Trustworthy Artificial Intelligence Systems (ICSTAIS2026).
+
+File Structure:
+icstais2026/
+├── index.html
+├── css/
+│   ├── style.css
+│   └── responsive.css
+├── js/
+│   └── script.js
+├── pages/
+│   ├── committees.html
+│   ├── organizing-committee.html
+│   ├── technical-program-committee.html
+│   ├── international-advisory-committee.html
+│   ├── national-advisory-committee.html
+│   ├── speakers.html
+│   ├── plenary.html
+│   ├── keynote.html
+│   ├── tutorial.html
+│   ├── program.html
+│   ├── accepted-papers.html
+│   ├── events.html
+│   ├── call-for-papers.html
+│   ├── paper-submission.html
+│   ├── publication.html
+│   ├── registration.html
+│   ├── payment.html
+│   ├── venue.html
+│   ├── highlights.html
+│   ├── visa.html
+│   └── contact.html
+├── assets/
+│   ├── images/
+│   │   ├── logos/
+│   │   │   ├── cu-logo.png
+│   │   │   ├── conference-logo.png
+│   │   │   ├── springer-logo.png
+│   │   │   └── sist-logo.png
+│   │   └── backgrounds/
+│   │       └── chandigarh-university-background.jpg
+│   └── documents/
+│       ├── templates/
+│       │   ├── word-template.docx
+│       │   └── latex-template.zip
+│       └── proceedings/
+│           └── sample-proceedings.pdf
+
+Instructions:
+1. Place all files in a directory on your web server.
+2. Replace the placeholder images in the assets/images/ directory with the actual conference, university, and logo images.
+3. The website is fully responsive and works on desktop, tablet, and mobile devices.
+4. The registration and contact forms include JavaScript validation.
+5. All pages are interconnected with a consistent navigation menu.
+
+The website includes all the requested pages and features:
+- Complete conference information from the provided document
+- All menu options as specified
+- Conference logo, university logo, Springer logo, SIST logo, and university background image
+- Responsive design for all devices
+- Interactive forms with validation
+- Professional styling consistent with an academic conference
+
+Note: The actual images need to be added to the assets/images/ directory for the website to display correctly.
