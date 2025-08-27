@@ -48,19 +48,3 @@ icstais2026/
 │       └── proceedings/
 │           └── sample-proceedings.pdf
 
-Instructions:
-1. Place all files in a directory on your web server.
-2. Replace the placeholder images in the assets/images/ directory with the actual conference, university, and logo images.
-3. The website is fully responsive and works on desktop, tablet, and mobile devices.
-4. The registration and contact forms include JavaScript validation.
-5. All pages are interconnected with a consistent navigation menu.
-
-The website includes all the requested pages and features:
-- Complete conference information from the provided document
-- All menu options as specified
-- Conference logo, university logo, Springer logo, SIST logo, and university background image
-- Responsive design for all devices
-- Interactive forms with validation
-- Professional styling consistent with an academic conference
-
-Note: The actual images need to be added to the assets/images/ directory for the website to display correctly.
