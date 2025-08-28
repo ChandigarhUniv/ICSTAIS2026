@@ -1487,7 +1487,8 @@ input[type="file"] {
   animation: tickerMove 25s linear infinite;
 }
 
-.ticker span {
+.ticker a {
+    color: white;
   display: inline-block;
   margin-right: 50px;
   font-size: 1rem;
