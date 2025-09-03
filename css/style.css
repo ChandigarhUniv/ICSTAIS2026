@@ -201,7 +201,22 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* 👈 Add this */
+  padding: 0 20px; /* thoda gap bacha ke rakhe left/right se */
+  box-sizing: border-box;
 }
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px; /* 👈 sabke beech equal spacing */
+  margin: 0;
+  padding: 0;
+}
+
+
+
 
 .logo {
   color: #fff;
@@ -282,16 +297,16 @@ img {
 }
 
 /* Responsive */
-@media (max-width: 790px) {
+@media (max-width: 700px) {
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 250px;
+    right: -700%;
+    width: 300px;
     height: 100vh;
     background: #34495e;
-    flex-direction: column;
-    align-items: start;
+ 
+
     padding: 80px 20px;
     transition: right 0.3s ease;
   }
@@ -301,7 +316,7 @@ img {
   }
 
   .nav-menu li {
-    margin: 15px 0;
+    margin: 20px ;
   }
 
   .mobile-toggle {
@@ -1202,15 +1217,17 @@ img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .nav-menu {
         position: fixed;
         top: 0;
         right: -300px;
-        width: 280px;
+        width: 300px;
         height: 100vh;
         background-color: #34495e;
-        flex-direction: column;
+          flex-direction: column; /* horizontal row */
+  flex-wrap: nowrap;  
+  
         padding: 80px 0 30px;
         transition: right 0.3s ease;
         z-index: 1001;
@@ -1242,7 +1259,7 @@ img {
     }
     
     .dropdown-menu a {
-        padding-left: 40px;
+        padding-left: 80px;
     }
     
     .hero-content h1 {
@@ -1614,4 +1631,448 @@ input[type="file"] {
   font-size: 15px;
   line-height: 1.6;
   color: #444;
+}
+
+
+.committee-item:hover {
+  transform: translateY(-5px);          /* lift card on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.committee-item h3 {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 12px;
+}
+
+.committee-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+/* ===== Sponsorship Page – Modern Upgrade (Enhanced) ===== */
+.sponsorship-page h2,
+.sponsorship-page h3,
+.sponsorship-page h4 {
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* General paragraph style */
+.sponsorship-page p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* ===== Sponsor Cards ===== */
+.sponsorship-page .sponsor-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px; /* slightly more rounded */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  padding: 25px 30px; /* more padding for luxury feel */
+  margin-bottom: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid #007bff; /* subtle accent */
+}
+
+.sponsorship-page .sponsor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+.sponsorship-page .sponsor-card .sponsor-logo {
+  flex-shrink: 0;
+  margin-right: 25px;
+}
+
+.sponsorship-page .sponsor-card .sponsor-logo img {
+  max-width: 150px; /* slightly smaller for consistency */
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  padding: 5px;
+  background: #fff;
+}
+
+.sponsorship-page .sponsor-card .sponsor-info h4 {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  color: #007bff;
+  letter-spacing: 0.5px;
+}
+
+.sponsorship-page .sponsor-card .sponsor-info p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+.sponsorship-page .sponsor-card .sponsor-info ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.sponsorship-page .sponsor-card .sponsor-info ul li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== Sponsor Packages Table – Modern ===== */
+.sponsorship-page .sponsor-table th,
+.sponsorship-page .sponsor-table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-radius: 10px;
+  border: none;
+}
+
+.sponsorship-page .sponsor-table th {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.sponsorship-page .sponsor-table td {
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ===== Sponsorship Form – Modern ===== */
+.sponsorship-page .sponsorship-form {
+  margin-top: 35px;
+  background: #ffffff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s;
+}
+
+.sponsorship-page .sponsorship-form:hover {
+  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+}
+
+.sponsorship-page .sponsorship-form fieldset {
+  border: 1px solid #ddd;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+}
+
+.sponsorship-page .sponsorship-form legend {
+  font-weight: 700;
+  color: #007bff;
+  font-size: 19px;
+}
+
+.sponsorship-page .sponsorship-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.sponsorship-page .sponsorship-form input,
+.sponsorship-page .sponsorship-form textarea,
+.sponsorship-page .sponsorship-form select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
+.sponsorship-page .sponsorship-form input:focus,
+.sponsorship-page .sponsorship-form textarea:focus,
+.sponsorship-page .sponsorship-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+.sponsorship-page .sponsorship-form input[type="radio"],
+.sponsorship-page .sponsorship-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.sponsorship-page .sponsorship-form .submit-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+
+.sponsorship-page .sponsorship-form .submit-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #0099ff);
+  transform: translateY(-2px);
+}
+
+.sponsorship-page .sponsorship-form a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.sponsorship-page .sponsorship-form a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .sponsorship-page .sponsor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sponsorship-page .sponsor-card .sponsor-logo {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .sponsorship-page .sponsor-card .sponsor-info h4 {
+    font-size: 18px;
+  }
+  .sponsorship-page .sponsor-card .sponsor-info p {
+    font-size: 15px;
+  }
+}
+/* ===== Doctoral Symposium Section ===== */
+.doctoral-symposium {
+  padding: 60px 0;
+  background: #f9f9f9; /* light background */
+}
+
+.doctoral-symposium .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.doctoral-symposium .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.doctoral-symposium .section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.doctoral-symposium .separator {
+  width: 80px;
+  height: 3px;
+  background: #0077cc; /* conference brand blue */
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.doctoral-symposium .ds-content p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.doctoral-symposium .ds-content h3 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #0077cc;
+  font-weight: 600;
+  border-left: 4px solid #0077cc;
+  padding-left: 10px;
+}
+
+.doctoral-symposium .ds-content ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.doctoral-symposium .ds-content ul li {
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.98rem;
+}
+
+.doctoral-symposium .ds-content ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #0077cc;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.doctoral-symposium .ds-content ul ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.doctoral-symposium .ds-content ul ul li {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.doctoral-symposium strong {
+  color: #000;
+}
+
+/* ===== Important Dates Section ===== */
+.important-dates {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark gradient */
+  color: #fff;
+}
+
+.important-dates .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.important-dates .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.important-dates .section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.important-dates .separator {
+  width: 90px;
+  height: 4px;
+  background: #1abc9c;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.date-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px 20px;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.date-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.date-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1abc9c;
+}
+
+.date-card p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.date-card.highlight {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: #fff;
+}
+
+.date-card.highlight h3 {
+  color: #fff;
+}
+
+.date-card.highlight p {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.volunteer-section {
+  padding: 60px 20px;
+  background: #f9f9f9; /* subtle light bg */
+}
+
+.volunteer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.volunteer-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 600;
+  border-bottom: 2px solid #0073e6;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.volunteer-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.volunteer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0073e6;
+  margin-bottom: 6px;
+}
+
+.volunteer-details {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }
