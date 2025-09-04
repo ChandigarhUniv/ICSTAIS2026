@@ -189,34 +189,23 @@ img {
 
 /* Navigation Styles */
 /* Navbar */
+/* Navbar */
 .navbar {
   background-color: #34495e;
   padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1000; /* navbar ko upar rakho */
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* 👈 Add this */
-  padding: 0 20px; /* thoda gap bacha ke rakhe left/right se */
+  flex-wrap: wrap;
+  padding: 0 20px;
   box-sizing: border-box;
 }
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px; /* 👈 sabke beech equal spacing */
-  margin: 0;
-  padding: 0;
-}
-
-
-
 
 .logo {
   color: #fff;
@@ -229,20 +218,19 @@ img {
 .nav-menu {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
-.nav-menu li a{
-    color:white;
-}
 
 .nav-menu li {
-    color: white;
+  color: white;
   margin-left: 25px;
 }
 
-.nav-link {
-  color: #fff;
+.nav-menu li a {
+  color: white;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
@@ -267,6 +255,9 @@ img {
   padding: 10px 0;
   display: none;
   min-width: 180px;
+
+  z-index: 2000; /* ✅ navbar se bhi upar */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .dropdown-menu li {
@@ -287,6 +278,8 @@ img {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+
 
 /* Mobile toggle */
 .mobile-toggle {
@@ -1041,9 +1034,12 @@ img {
 .footer-column ul li {
     margin-bottom: 10px;
 }
+.footer-column{
+  color: white;
+}
 
 .footer-column ul li a {
-    color: black;
+    color: white;
     transition: color 0.3s ease;
 }
 
@@ -1056,6 +1052,14 @@ img {
     font-size: 14px;
     line-height: 1.6;
 }
+.footer-column p a{
+  color: white;
+
+}
+.footer-column p a:hover{
+  color: #3498db;
+}
+
 
 .footer-column i {
     color: #3498db;

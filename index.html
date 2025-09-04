@@ -19,6 +19,82 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slider-container {
+      max-width: 950px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .card.active {
+      display: block;
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 24px;
+      border-left: 4px solid #0073e6;
+      padding-left: 10px;
+    }
+
+    .card p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #444;
+      text-align: justify;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 30%;
+      font-size: 28px;
+      background: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .arrow:hover {
+      background: #005bb5;
+
+    }
+
+    .arrow.left {
+      left: 15px;
+    }
+
+    .arrow.right {
+      right: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 <body>
   <!-- ===== HEADER ===== -->
   <header>
@@ -82,30 +158,40 @@
             </ul>
           </li>
           <li><a href="pages/program.html">Program (TBA)</a></li>
-          <li><a href="pages/accepted-papers.html">Accepted Papers</a></li>
+         
+           <li class="dropdown">
+            <a href="pages/payment.html">Registration & Payment Information <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+            <li><a href="pages/registration.html">Registration</a></li>
+            <li><a href="pages/payment.html">Payment information</a></li>
+            </ul>
+            </li>
           <li class="dropdown">
             <a href="pages/events.html">Calls <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="pages/call-for-paper.html">Call for Conference Papers</a></li>
+              <li><a href="pages/call-for-paper.html">Call for Paper</a></li>
+               <li><a href="pages/callposter.html">Call for Posters</a></li>
+               <li><a href="pages/callfordoc.html">Call for Doctoral Symposium</a></li>
+                <li><a href="#">Call for Workshops</a></li>
               <li><a href="pages/callspecial.html">Call for Special Sessions</a></li>
               <li><a href="pages/callsponser.html">Call for Sponsorship</a></li>
-              <li><a href="#">Call for Workshops</a></li>
-              <li><a href="pages/callposter.html">Call for Posters</a></li>
-              <li><a href="#">Call for Doctoral Symposium</a></li>
+              
             </ul>
           </li>
+           <li><a href="pages/accepted-papers.html">Accepted Papers</a></li>
           <li class="dropdown">
             <a href="pages/paper-submission.html">Paper Submission <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
+               <li><a href="pages/importantdates.html">Important Dates</a></li>
+    
               <li><a href="pages/instruction-for-author.html">Instruction for Author</a></li>
-              <li><a href="pages/call-for-paper.html">Call for Paper</a></li>
+             
               <li><a href="https://cmt3.research.microsoft.com/ICSTAIS2026" target="_blank">Submit via Microsoft CMT</a></li>
-              <li><a href="pages/importantdates.html">Important Dates</a></li>
+             
             </ul>
           </li>
           <li><a href="pages/publication.html">Publication & Indexing</a></li>
-          <li><a href="pages/registration.html">Registration</a></li>
-          <li><a href="pages/payment.html">Payment Information</a></li>
+     
           <li class="dropdown">
             <a href="pages/venue.html">Venue <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
@@ -114,7 +200,6 @@
               <li><a href="pages/visa.html">VISA</a></li>
             </ul>
           </li>
-           <li><a href="pages/cyberabout.html" class="active">About Cybersecurity Centre of Excellence</a></li>
           <li><a href="pages/contact.html">Contact Us</a></li>
         </ul>
 
@@ -164,20 +249,43 @@
     </section>
 
     <!-- About Conference -->
-    <section class="about-section">
-      <div class="container about-content">
-        <h2 class="section-header">About the Conference</h2>
-        <div class="about-text">
-                    <p>ICSTAIS 2026 represents a premier international forum dedicated to advancing the frontiers of secure and trustworthy artificial intelligence. As AI systems become increasingly integrated into critical infrastructure and decision-making processes, the need for robust security measures and trustworthy implementations has never been more urgent.</p>
-                    <p>This conference brings together the global research community to address the dual challenge of leveraging AI for cybersecurity enhancement while simultaneously protecting AI systems from emerging threats.</p>
-                    <p>The conference emphasizes interdisciplinary collaboration, featuring cutting-edge research presentations, interactive workshops, and industry showcases. With proceedings published in Springer's prestigious Smart Innovation, Systems and Technologies series, ICSTAIS 2026 ensures that groundbreaking research reaches the broader academic and industrial communities.</p>
-                    <p>The event will foster meaningful dialogue between academia, industry, and policy makers to shape the future of secure AI deployment across various sectors.</p>
-                </div>
-        <div class="about-image">
-          <img src="assets/images/backgrounds/chandigarh-university-background.jpg" alt="Chandigarh University Campus">
-        </div>
+   <section class="about-section">
+  <div class="container">
+    <h2 class="section-header">About the Conference</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          ICSTAIS 2026 represents a premier international forum dedicated to advancing the 
+          frontiers of secure and trustworthy artificial intelligence. As AI systems become 
+          increasingly integrated into critical infrastructure and decision-making processes, 
+          the need for robust security measures and trustworthy implementations has never 
+          been more urgent.
+        </p>
+        <p>
+          This conference brings together the global research community to address the dual 
+          challenge of leveraging AI for cybersecurity enhancement while simultaneously 
+          protecting AI systems from emerging threats.
+        </p>
+        <p>
+          The conference emphasizes interdisciplinary collaboration, featuring cutting-edge 
+          research presentations, interactive workshops, and industry showcases. With 
+          proceedings published in Springer's prestigious Smart Innovation, Systems and 
+          Technologies series, ICSTAIS 2026 ensures that groundbreaking research reaches 
+          the broader academic and industrial communities.
+        </p>
+        <p>
+          The event will foster meaningful dialogue between academia, industry, and policy 
+          makers to shape the future of secure AI deployment across various sectors.
+        </p>
       </div>
-    </section>
+
+      <div class="about-image">
+        <img src="assets/images/backgrounds/chandigarh-university-background.jpg" alt="Chandigarh University Campus">
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Important Dates -->
     <section class="dates-section">
@@ -194,58 +302,102 @@
     </section>
         <!-- About University Section -->
     <section class="university-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Chandigarh University</h2>
-                <div class="separator"></div>
-            </div>
-            <div class="university-content">
-                <div class="university-text">
-                    <p>Chandigarh University (CU) stands as one of India's leading private universities and Asia's fastest-growing educational institutions, distinguished by its commitment to academic excellence and innovation. Recognized by the University Grants Commission and accredited with the prestigious A+ grade by NAAC, CU has become the youngest and only private university in India to achieve this distinction in its first accreditation cycle.</p>
-                    <p>The university offers a unique academic model designed to match international standards, with a wide spectrum of programs paired with flexibility, experiential learning, and interdisciplinary orientation. CU maintains strong industry partnerships with over 515 top-ranked universities worldwide and has established itself as a leader in campus placements, with over 9000 placement offers for recent graduating batches.</p>
-                    <p>With students from all 28 Indian states, 8 Union Territories, and 50 nations, CU fosters a cosmopolitan, inclusive atmosphere that promotes global perspectives and cultural diversity. The university's state-of-the-art infrastructure, including advanced technology integration and comprehensive research facilities, provides an ideal environment for hosting international academic conferences like ICSTAIS 2026.</p>
-                </div>
-                <div class="university-image">
-                    <img src="assets/images/backgrounds/chandigarh-university-background.jpg" alt="Chandigarh University Campus">
-                </div>
-            </div>
-        </div>
-    </section>
+       <div class="slider-container">
+    <!-- Card 1 -->
+    <div class="card active">
+      <h2>About Chandigarh University</h2>
+      <p>
+        Chandigarh University (CU) stands as one of India's leading private universities and Asia's fastest-growing educational institutions, distinguished by its commitment to academic excellence and innovation. Recognized by the University Grants Commission and accredited with the prestigious A+ grade by NAAC, CU has become the youngest and only private university in India to achieve this distinction in its first accreditation cycle.
+      </p>
+      <p>
+        The university offers a unique academic model designed to match international standards, with a wide spectrum of programs paired with flexibility, experiential learning, and interdisciplinary orientation. CU maintains strong industry partnerships with over 515 top-ranked universities worldwide and has established itself as a leader in campus placements, with over 9000 placement offers for recent graduating batches.
+      </p>
+      <p>
+        With students from all 28 Indian states, 8 Union Territories, and 50 nations, CU fosters a cosmopolitan, inclusive atmosphere that promotes global perspectives and cultural diversity. The university's state-of-the-art infrastructure, including advanced technology integration and comprehensive research facilities, provides an ideal environment for hosting international academic conferences like ICSTAIS 2026.
+      </p>
+    </div>
 
-    <!-- About Department Section -->
-    <section class="department-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About the Department</h2>
-                <div class="separator"></div>
-            </div>
-            <div class="department-content">
-                <p>Chandigarh University's engineering programs are enhanced through strategic collaborations with industry leaders like IBM, focusing on critical emerging technology areas such as Cloud, Mobility, Analytics, and Cybersecurity. The university has established specialized facilities including the IBM Software Lab for Emerging Technologies, which supports advanced research and education in Big Data & Analytics, Cloud Computing, Business Analytics, and Information Security.</p>
-                <p>The department offers futuristic Bachelor of Engineering courses with industry-aligned specializations, emphasizing hands-on experience through real-world industry projects, proven practices, and comprehensive case studies. This strong foundation in emerging technologies and cybersecurity makes the department exceptionally well-positioned to host ICSTAIS 2026, bringing together expertise in both AI systems and security frameworks.</p>
-                <p>The department's commitment to cutting-edge research and its established connections with global technology leaders ensure that conference participants will benefit from access to advanced research facilities and opportunities for meaningful industry collaboration during the event.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Card 2 -->
+    <div class="card">
+      <h2>About the Department</h2>
+      <p>
+        Chandigarh University's engineering programs are enhanced through strategic collaborations with industry leaders like IBM, focusing on critical emerging technology areas such as Cloud, Mobility, Analytics, and Cybersecurity. The university has established specialized facilities including the IBM Software Lab for Emerging Technologies, which supports advanced research and education in Big Data & Analytics, Cloud Computing, Business Analytics, and Information Security.
+      </p>
+      <p>
+        The department offers futuristic Bachelor of Engineering courses with industry-aligned specializations, emphasizing hands-on experience through real-world industry projects, proven practices, and comprehensive case studies. This strong foundation in emerging technologies and cybersecurity makes the department exceptionally well-positioned to host ICSTAIS 2026, bringing together expertise in both AI systems and security frameworks.
+      </p>
+      <p>
+        The department's commitment to cutting-edge research and its established connections with global technology leaders ensure that conference participants will benefit from access to advanced research facilities and opportunities for meaningful industry collaboration during the event.
+      </p>
+    </div>
 
-    <!-- Venue -->
-    <section class="venue-section">
-      <div class="container venue-content">
-        <h2 class="section-header">Conference Venue</h2>
-        <div class="venue-info">
-          <h3>Chandigarh University</h3>
-          <p>NH-05 Chandigarh-Ludhiana Highway, Mohali, Punjab (INDIA)</p>
-          <p><a href="https://www.cuchd.in/maps/" target="_blank">View Directions</a></p>
-        </div>
-        <div class="venue-map">
-          <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" loading="lazy"></iframe>
-        </div>
-      </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <h2>About Centre of Excellence</h2>
+      <p>
+        The Centre of Excellence for Cybersecurity, Privacy, and Data Protection at Chandigarh University 
+        is an interdisciplinary hub established to advance cutting-edge research, innovation, and skill 
+        development in critical areas of digital security. Established with the vision to strengthen national 
+        capabilities and foster industry–academia collaboration, the Centre focuses on cutting-edge areas 
+        including Network Security, Application Security, Cloud Security, Endpoint Security, SOC/SIEM, Cyber 
+        Threat Intelligence, Digital Forensics, Post-Quantum Cryptography, Zero-Trust Architecture, and 
+        OT/IoT Security.
+      </p>
+
+      <p>
+        Formed as a strategic consortium with global cybersecurity leaders—Palo Alto Networks, Check Point, 
+        Fortinet, and the CyberPeace Foundation—the Centre brings together academia, industry, and civil 
+        society to address emerging challenges in cybersecurity, data protection, and privacy. By integrating 
+        advanced technologies, real-world problem solving, and hands-on training, the Centre empowers 
+        students, researchers, and professionals to address evolving cyber threats and develop indigenous 
+        solutions.
+      </p>
+
+      <p>
+        Serving as a bridge between academia, industry, and government organizations, the Centre is committed 
+        to nurturing skilled cybersecurity professionals and driving impactful research that contributes to a 
+        safer and more secure digital ecosystem. It serves as a collaborative platform for developing indigenous 
+        technologies, fostering policy research, and delivering hands-on training to build a future-ready workforce.
+      </p>
+
+      <p>
+        With its unique blend of expertise and resources, the Centre is committed to creating impactful solutions 
+        that safeguard digital ecosystems, strengthen cyber resilience, and contribute to a secure and trustworthy 
+        cyberspace.
+      </p>
+    </div>
+
+    <!-- Arrows -->
+    <button class="arrow left" onclick="prevCard()">&#10094;</button>
+    <button class="arrow right" onclick="nextCard()">&#10095;</button>
+  </div>
+
+  <script>
+    let current = 0;
+    const cards = document.querySelectorAll('.card');
+
+    function showCard(index) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextCard() {
+      current = (current + 1) % cards.length;
+      showCard(current);
+    }
+
+    function prevCard() {
+      current = (current - 1 + cards.length) % cards.length;
+      showCard(current);
+    }
+  </script>
     </section>
   </main>
 
 
   <!-- ===== FOOTER ===== -->
-  <footer>
+  <footer class="footer">
     <div class="container footer-content">
       <div class="footer-column">
         <h3>Quick Links</h3>

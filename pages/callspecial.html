@@ -16,6 +16,81 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+<style>
+  /* Form Wrapper */
+.session-form {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Section Headings */
+.session-form h4 {
+  margin: 30px 0 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0073e6;
+  border-left: 4px solid #0073e6;
+  padding-left: 10px;
+}
+
+/* Labels */
+.session-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+.session-form input,
+.session-form textarea,
+.session-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.session-form input:focus,
+.session-form textarea:focus {
+  border-color: #0073e6;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0,115,230,0.3);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Button */
+.submit-btn {
+  display: inline-block;
+  background: #0073e6;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+</style>
 <body>
   <!-- Header Section -->
   <header class="header">
@@ -58,7 +133,7 @@
       </div>
     </div>
 
- <nav class="navbar">
+    <nav class="navbar">
       <div class="container nav-content">
         <ul class="nav-menu">
           <li><a href="../index.html" class="active">Home</a></li>
@@ -81,30 +156,40 @@
             </ul>
           </li>
           <li><a href="program.html">Program (TBA)</a></li>
-          <li><a href="accepted-papers.html">Accepted Papers</a></li>
-          <li class="dropdown">
-            <a href="events.html">Events <i class="fas fa-chevron-down"></i></a>
+         
+           <li class="dropdown">
+            <a href="payment.html">Registration & Payment Information <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="call-for-papers.html">Call for Conference Papers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="payment.html">Payment information</a></li>
+            </ul>
+            </li>
+          <li class="dropdown">
+            <a href="events.html">Calls <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="call-for-paper.html">Call for Paper</a></li>
+               <li><a href="callposter.html">Call for Posters</a></li>
+               <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+                <li><a href="#">Call for Workshops</a></li>
               <li><a href="callspecial.html">Call for Special Sessions</a></li>
               <li><a href="callsponser.html">Call for Sponsorship</a></li>
-              <li><a href="#">Call for Workshops</a></li>
-              <li><a href="callposter.html">Call for Posters</a></li>
-              <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+              
             </ul>
           </li>
+           <li><a href="accepted-papers.html">Accepted Papers</a></li>
           <li class="dropdown">
             <a href="paper-submission.html">Paper Submission <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
+               <li><a href="importantdates.html">Important Dates</a></li>
+    
               <li><a href="instruction-for-author.html">Instruction for Author</a></li>
-              <li><a href="call-for-paper.html">Call for Paper</a></li>
+             
               <li><a href="https://cmt3.research.microsoft.com/ICSTAIS2026" target="_blank">Submit via Microsoft CMT</a></li>
-              <li><a href="importantdates.html">Important Dates</a></li>
+             
             </ul>
           </li>
           <li><a href="publication.html">Publication & Indexing</a></li>
-          <li><a href="registration.html">Registration</a></li>
-          <li><a href="payment.html">Payment Information</a></li>
+     
           <li class="dropdown">
             <a href="venue.html">Venue <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
@@ -113,7 +198,6 @@
               <li><a href="visa.html">VISA</a></li>
             </ul>
           </li>
-           <li><a href="cyberabout.html" class="active">About Cybersecurity Centre of Excellence</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
 
@@ -121,8 +205,7 @@
         <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
       </div>
     </nav>
-    </header>
-    
+  </header>
   <!-- ===== TICKER SECTION ===== -->
 <section class="ticker-section">
   <div class="ticker-wrap">
@@ -167,37 +250,185 @@
       </ul>
 
       <h3>Special Session Proposal Submission Form</h3>
-      <form action="#" method="post">
-        <div class="form-group">
-          <label for="session-title">Special Session Title</label>
-          <input type="text" id="session-title" name="session-title" required>
-        </div>
+<form action="#" method="post" class="session-form" id="session-form">
 
-        <div class="form-group">
-          <label for="session-acronym">Special Session Acronym</label>
-          <input type="text" id="session-acronym" name="session-acronym" required>
-        </div>
+  <!-- Session Info -->
+  <div class="form-group">
+    <label for="session-title">Special Session Title</label>
+    <input type="text" id="session-title" name="session-title" required>
+  </div>
 
-        <div class="form-group">
-          <label for="session-description">Brief Session Description</label>
-          <textarea id="session-description" name="session-description" rows="4" required></textarea>
-        </div>
+  <div class="form-group">
+    <label for="session-acronym">Special Session Acronym</label>
+    <input type="text" id="session-acronym" name="session-acronym" required>
+  </div>
 
-        <div class="form-group">
-          <label for="technical-outline">Technical Outline of the Session</label>
-          <textarea id="technical-outline" name="technical-outline" rows="4" required></textarea>
-        </div>
+  <div class="form-group">
+    <label for="session-description">Brief Session Description</label>
+    <textarea id="session-description" name="session-description" rows="3" required></textarea>
+  </div>
 
-        <div class="form-group">
-          <label for="reviewers-list">Upload Reviewers List (Insert Google Spreadsheet link, Column Headers: Reviewer Name, Designation, Affiliation, Affiliation Address, MS CMT Registered Email Address, Google Scholar ID, Scopus ID)</label>
-          <input type="text" id="reviewers-list" name="reviewers-list" required>
-        </div>
+  <div class="form-group">
+    <label for="technical-outline">Technical Outline of the Session</label>
+    <textarea id="technical-outline" name="technical-outline" rows="3" required></textarea>
+  </div>
 
-        <button type="submit">Submit Proposal</button>
-      </form>
+  <!-- Chair Information -->
+  <h4>Chair Information</h4>
+  <div class="form-group">
+    <label for="chair-name">Chair Name</label>
+    <input type="text" id="chair-name" name="chair-name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="chair-affiliation">Chair Affiliation</label>
+    <input type="text" id="chair-affiliation" name="chair-affiliation" required>
+  </div>
+
+  <div class="form-group">
+    <label for="chair-address">Chair Affiliation Address</label>
+    <input type="text" id="chair-address" name="chair-address">
+  </div>
+
+  <div class="form-group">
+    <label for="chair-email">Chair Email (Microsoft CMT Registered)</label>
+    <input type="email" id="chair-email" name="chair-email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="chair-cv">Upload Short IEEE-style CV (Google Docs Link)</label>
+    <input type="url" id="chair-cv" name="chair-cv" placeholder="https://docs.google.com/...">
+  </div>
+
+  <!-- Co-Chair Information -->
+  <h4>Co-Chair Information</h4>
+  <div class="form-group">
+    <label for="cochair-name">Co-Chair Name</label>
+    <input type="text" id="cochair-name" name="cochair-name">
+  </div>
+
+  <div class="form-group">
+    <label for="cochair-affiliation">Co-Chair Affiliation</label>
+    <input type="text" id="cochair-affiliation" name="cochair-affiliation">
+  </div>
+
+  <div class="form-group">
+    <label for="cochair-email">Co-Chair Email (Microsoft CMT Registered)</label>
+    <input type="email" id="cochair-email" name="cochair-email">
+  </div>
+
+  <div class="form-group">
+    <label for="cochair-cv">Upload Short IEEE-style CV (Google Docs Link)</label>
+    <input type="url" id="cochair-cv" name="cochair-cv" placeholder="https://docs.google.com/...">
+  </div>
+
+  <!-- Reviewers -->
+  <div class="form-group">
+    <label for="reviewers-list">Upload Reviewers List (Google Spreadsheet Link)</label>
+    <input type="url" id="reviewers-list" name="reviewers-list" required>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="submit-btn">Submit Proposal</button>
+</form>
+
     </div>
   </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("session-form");
+  const submitBtn = form.querySelector("button[type='submit']");
+
+  if (!form) return;
+
+  // Utility: check if URL is valid
+  function isValidURL(url) {
+    try { new URL(url); return true; } 
+    catch { return false; }
+  }
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // --- Collect Values ---
+    const sessionTitle = document.getElementById("session-title").value.trim();
+    const sessionAcronym = document.getElementById("session-acronym").value.trim();
+    const sessionDescription = document.getElementById("session-description").value.trim();
+    const technicalOutline = document.getElementById("technical-outline").value.trim();
+
+    const chairName = document.getElementById("chair-name").value.trim();
+    const chairAffiliation = document.getElementById("chair-affiliation").value.trim();
+    const chairAddress = document.getElementById("chair-address").value.trim();
+    const chairEmail = document.getElementById("chair-email").value.trim();
+    const chairCV = document.getElementById("chair-cv").value.trim();
+
+    const coChairName = document.getElementById("cochair-name").value.trim();
+    const coChairAffiliation = document.getElementById("cochair-affiliation").value.trim();
+    const coChairEmail = document.getElementById("cochair-email").value.trim();
+    const coChairCV = document.getElementById("cochair-cv").value.trim();
+
+    const reviewersList = document.getElementById("reviewers-list").value.trim();
+
+    // ✅ Disable button while submitting
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    // --- FormData ---
+    const formData = new FormData();
+    formData.append("sessionTitle", sessionTitle);
+    formData.append("sessionAcronym", sessionAcronym);
+    formData.append("sessionDescription", sessionDescription);
+    formData.append("technicalOutline", technicalOutline);
+
+    formData.append("chairName", chairName);
+    formData.append("chairAffiliation", chairAffiliation);
+    formData.append("chairAddress", chairAddress);
+    formData.append("chairEmail", chairEmail);
+    formData.append("chairCV", chairCV);
+
+    formData.append("coChairName", coChairName);
+    formData.append("coChairAffiliation", coChairAffiliation);
+    formData.append("coChairEmail", coChairEmail);
+    formData.append("coChairCV", coChairCV);
+
+    formData.append("reviewersList", reviewersList);
+
+    // Convert FormData → URLSearchParams
+    const payload = new URLSearchParams();
+    for (const [key, value] of formData.entries()) payload.append(key, value);
+
+    // --- Send to Google Sheets ---
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzGkLnWW09up-2uxkz8YyANTvBZcyhJmeEfxGm71Hrx2vVM7LcbmdNJUkcyOj_MFHgQAA/exec", // <-- replace with your Apps Script URL
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: payload.toString()
+        }
+      );
+
+      const result = await response.json();
+      if (result.status === "success") {
+        alert("✅ Proposal submitted successfully!");
+        form.reset();
+        submitBtn.textContent = "Submitted";
+      } else {
+        alert("❌ Error: " + result.message);
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Proposal";
+      }
+    } catch (err) {
+      console.error(err);
+      alert("⚠️ Submission failed. Check console.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Proposal";
+    }
+  });
+});
+</script>
+
 
 
   <!-- Footer Section -->

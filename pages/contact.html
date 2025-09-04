@@ -16,6 +16,172 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+<style>
+    /* ===== Contact Form Styling ===== */
+.contact-section {
+    padding: 60px 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+}
+
+.contact-section .section-header h2 {
+    font-size: 32px;
+    color: #0073e6;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-section .section-header .separator {
+    width: 60px;
+    height: 3px;
+    background: #0073e6;
+    margin: 0 auto 40px;
+    border-radius: 2px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-information {
+    flex: 1 1 350px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.contact-information h3 {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-information p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-details .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-details .contact-item i {
+    font-size: 20px;
+    color: #0073e6;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.contact-details .contact-item h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-details .contact-item p a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contact-details .contact-item p a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form-container {
+    flex: 1 1 450px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.contact-form-container h3 {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-form-container .form-group {
+    margin-bottom: 18px;
+}
+
+.contact-form-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0,115,230,0.2);
+}
+
+.contact-form-container textarea {
+    resize: vertical;
+}
+
+.contact-form-container .form-actions {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contact-form-container .btn {
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form-container .btn:hover {
+    background: #005bb5;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-information,
+    .contact-form-container {
+        width: 100%;
+    }
+}
+
+</style>
 <body>
     <!-- Header Section -->
     <header class="header">
@@ -59,7 +225,7 @@
         </div>
         
         <!-- Navigation Menu -->
- <nav class="navbar">
+    <nav class="navbar">
       <div class="container nav-content">
         <ul class="nav-menu">
           <li><a href="../index.html" class="active">Home</a></li>
@@ -82,30 +248,40 @@
             </ul>
           </li>
           <li><a href="program.html">Program (TBA)</a></li>
-          <li><a href="accepted-papers.html">Accepted Papers</a></li>
-          <li class="dropdown">
-            <a href="events.html">Events <i class="fas fa-chevron-down"></i></a>
+         
+           <li class="dropdown">
+            <a href="payment.html">Registration & Payment Information <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="call-for-papers.html">Call for Conference Papers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="payment.html">Payment information</a></li>
+            </ul>
+            </li>
+          <li class="dropdown">
+            <a href="events.html">Calls <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="call-for-paper.html">Call for Paper</a></li>
+               <li><a href="callposter.html">Call for Posters</a></li>
+               <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+                <li><a href="#">Call for Workshops</a></li>
               <li><a href="callspecial.html">Call for Special Sessions</a></li>
               <li><a href="callsponser.html">Call for Sponsorship</a></li>
-              <li><a href="#">Call for Workshops</a></li>
-              <li><a href="callposter.html">Call for Posters</a></li>
-              <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+              
             </ul>
           </li>
+           <li><a href="accepted-papers.html">Accepted Papers</a></li>
           <li class="dropdown">
             <a href="paper-submission.html">Paper Submission <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
+               <li><a href="importantdates.html">Important Dates</a></li>
+    
               <li><a href="instruction-for-author.html">Instruction for Author</a></li>
-              <li><a href="call-for-paper.html">Call for Paper</a></li>
+             
               <li><a href="https://cmt3.research.microsoft.com/ICSTAIS2026" target="_blank">Submit via Microsoft CMT</a></li>
-              <li><a href="importantdates.html">Important Dates</a></li>
+             
             </ul>
           </li>
           <li><a href="publication.html">Publication & Indexing</a></li>
-          <li><a href="registration.html">Registration</a></li>
-          <li><a href="payment.html">Payment Information</a></li>
+     
           <li class="dropdown">
             <a href="venue.html">Venue <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
@@ -114,7 +290,6 @@
               <li><a href="visa.html">VISA</a></li>
             </ul>
           </li>
-           <li><a href="cyberabout.html" class="active">About Cybersecurity Centre of Excellence</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
 
@@ -122,8 +297,7 @@
         <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
       </div>
     </nav>
-    </header>
-    
+  </header>
 <!-- ===== TICKER SECTION ===== -->
 <section class="ticker-section">
   <div class="ticker-wrap">
@@ -144,7 +318,7 @@
             </div>
             
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-information">
                     <h3>Contact Information</h3>
                     <p>Thank you for your interest in the ICSTAIS conference. Please provide the following information about your needs to help us serve you better. This information will enable us to route your request to the appropriate person. You should receive a response within 48 hours.</p>
                     
@@ -219,6 +393,94 @@
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+
+      // ======================
+      // Simple Validation
+      // ======================
+      function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      const fields = [
+        { id: "name", msg: "Please enter your name." },
+        { id: "affiliation", msg: "Please enter your affiliation." },
+        { id: "emailId", msg: "Please enter a valid email address.", validate: isValidEmail },
+        { id: "phoneNumber", msg: "Please enter your phone number." },
+        { id: "country", msg: "Please enter your country." },
+        { id: "subject", msg: "Please enter a subject." },
+        { id: "message", msg: "Please enter your message." },
+      ];
+
+      for (let field of fields) {
+        const value = document.getElementById(field.id).value.trim();
+        if (value === "" || (field.validate && !field.validate(value))) {
+          alert(field.msg);
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Message";
+          return;
+        }
+      }
+
+      // ======================
+      // Prepare FormData
+      // ======================
+      const formData = new FormData(contactForm);
+
+      // If you have file fields, you can convert them to Base64 like your registration form
+      // Example:
+      // if (formData.get("attachment")?.size > 0) {
+      //     const file = formData.get("attachment");
+      //     const base64 = await fileToBase64(file);
+      //     formData.set("attachment", base64);
+      //     formData.set("attachmentName", file.name);
+      // }
+
+      // Convert FormData → URLSearchParams
+      const payload = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        payload.append(key, value);
+      }
+
+      // ======================
+      // Send to Google Script
+      // ======================
+      try {
+        const response = await fetch(
+          "https://script.google.com/macros/s/AKfycbyEnICz1yXMJOuI6-TcZ6IJuSMUaij8bW49esWdeZQqh3MsvZl7FbzaZFZaLaYBaUKPng/exec",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: payload.toString(),
+          }
+        );
+
+        // For no-cors, response.json() may fail, but script will still submit
+        alert("✅ Your message has been sent successfully! We will get back to you soon.");
+        contactForm.reset();
+        submitBtn.textContent = "Submitted";
+
+      } catch (err) {
+        console.error(err);
+        alert("⚠️ Something went wrong. Please try again later.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Message";
+      }
+    });
+  }
+});
+    </script>
 
     <!-- Footer Section -->
     <footer class="footer">

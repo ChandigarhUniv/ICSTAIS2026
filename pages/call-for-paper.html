@@ -16,6 +16,317 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+<style>
+/* === Content Section Styling === */
+.cfp-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cfp-section .section-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cfp-section .separator {
+  width: 80px;
+  height: 3px;
+  background: #0073e6;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+.cfp-section h1,
+.cfp-section h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.cfp-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 10px auto;
+  color: #444;
+}
+
+.cfp-section ul,
+.cfp-section ol {
+  max-width: 850px;
+  margin: 15px auto;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.cfp-section ul li,
+.cfp-section ol li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* === Important Dates Table === */
+.dates-table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dates-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.dates-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.dates-table tr:hover {
+  background: #f1f7ff;
+}
+
+.dates-table td:first-child {
+  font-weight: 600;
+  text-align: left;
+  color: #333;
+}
+
+.dates-table td:last-child {
+  text-align: right;
+  color: #0073e6;
+  font-weight: 500;
+}
+
+/* === Accordion Section === */
+.accordion {
+  max-width: 900px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+  width: 100%;
+  background: #f7f9fc;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #222;
+}
+
+.accordion-header:hover {
+  background: #e9f2ff;
+}
+
+.accordion-header .arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 18px;
+  background: #fff;
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 600px;
+  padding: 14px 18px;
+}
+
+.accordion-body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.accordion-body li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* === Submission Guidelines Section === */
+.submission {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.submission h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+  position: relative;
+}
+
+.submission h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0073e6;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.submission p {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #0073e6;
+}
+
+.submission ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.submission ul li {
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: #f7f9fc;
+  border-left: 4px solid #0073e6;
+  border-radius: 6px;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submission ul li strong {
+  color: #111;
+}
+
+.submission ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+/* === Publication and Indexing Section === */
+.pub {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+/* Headings */
+.pub h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 0 15px;
+  color: #222;
+  position: relative;
+}
+
+.pub h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #0073e6;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Paragraphs */
+.pub p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Unordered List */
+.pub ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 25px;
+}
+
+.pub ul li {
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: #f8fafc;
+  border-left: 4px solid #0073e6;
+  border-radius: 6px;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub ul li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Ordered List */
+.pub ol {
+  counter-reset: list-counter;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.pub ol li {
+  counter-increment: list-counter;
+  position: relative;
+  font-size: 15px;
+  padding: 10px 14px 10px 40px;
+  margin-bottom: 10px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  color: #333;
+}
+
+.pub ol li::before {
+  content: counter(list-counter) ".";
+  position: absolute;
+  left: 14px;
+  font-weight: 600;
+  color: #0073e6;
+}
+
+
+
+</style>
 <body>
     <!-- Header Section -->
      <header>
@@ -57,7 +368,7 @@
             </div>
         </div>
         
-   <nav class="navbar">
+      <nav class="navbar">
       <div class="container nav-content">
         <ul class="nav-menu">
           <li><a href="../index.html" class="active">Home</a></li>
@@ -80,30 +391,40 @@
             </ul>
           </li>
           <li><a href="program.html">Program (TBA)</a></li>
-          <li><a href="accepted-papers.html">Accepted Papers</a></li>
-          <li class="dropdown">
-            <a href="events.html">Events <i class="fas fa-chevron-down"></i></a>
+         
+           <li class="dropdown">
+            <a href="payment.html">Registration & Payment Information <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="call-for-papers.html">Call for Conference Papers</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="payment.html">Payment information</a></li>
+            </ul>
+            </li>
+          <li class="dropdown">
+            <a href="events.html">Calls <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="call-for-paper.html">Call for Paper</a></li>
+               <li><a href="callposter.html">Call for Posters</a></li>
+               <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+                <li><a href="#">Call for Workshops</a></li>
               <li><a href="callspecial.html">Call for Special Sessions</a></li>
               <li><a href="callsponser.html">Call for Sponsorship</a></li>
-              <li><a href="#">Call for Workshops</a></li>
-              <li><a href="callposter.html">Call for Posters</a></li>
-              <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+              
             </ul>
           </li>
+           <li><a href="accepted-papers.html">Accepted Papers</a></li>
           <li class="dropdown">
             <a href="paper-submission.html">Paper Submission <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
+               <li><a href="importantdates.html">Important Dates</a></li>
+    
               <li><a href="instruction-for-author.html">Instruction for Author</a></li>
-              <li><a href="call-for-paper.html">Call for Paper</a></li>
+             
               <li><a href="https://cmt3.research.microsoft.com/ICSTAIS2026" target="_blank">Submit via Microsoft CMT</a></li>
-              <li><a href="importantdates.html">Important Dates</a></li>
+             
             </ul>
           </li>
           <li><a href="publication.html">Publication & Indexing</a></li>
-          <li><a href="registration.html">Registration</a></li>
-          <li><a href="payment.html">Payment Information</a></li>
+     
           <li class="dropdown">
             <a href="venue.html">Venue <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
@@ -112,7 +433,6 @@
               <li><a href="visa.html">VISA</a></li>
             </ul>
           </li>
-           <li><a href="cyberabout.html" class="active">About Cybersecurity Centre of Excellence</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
 
@@ -120,7 +440,7 @@
         <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
       </div>
     </nav>
-    </header>
+  </header>
     
     <!-- ===== TICKER SECTION ===== -->
 <section class="ticker-section">
@@ -143,7 +463,7 @@
             </div>
             
             <div class="cfp-content">
-                <p>Conference Overview</p>
+                <h1>Conference Overview</h1>
                 <p>The International Conference on Secure and Trustworthy Artificial Intelligence Systems (ICSTAIS 2026) invites original research contributions that advance the state-of-the-art in secure, trustworthy, and resilient AI systems. As artificial intelligence becomes increasingly pervasive in critical applications, ensuring the security, reliability, and trustworthiness of these systems has emerged as a paramount concern for researchers, practitioners, and policymakers worldwide.</p>
                 
                 <p>ICSTAIS 2026 provides a premier international platform for researchers, academicians, industry professionals, and graduate students to present cutting-edge research, share innovative solutions, and foster collaborative discussions on the convergence of artificial intelligence and cybersecurity. The conference emphasizes both theoretical foundations and practical applications, encouraging submissions that bridge the gap between research and real-world implementation.</p>
@@ -172,111 +492,189 @@
                 </table>
                 <p>All deadlines are 11:59 PM IST</p>
 
-                <h3>Scope and Topics of Interest</h3>
-                <p>We solicit high-quality original research papers, survey papers, and position papers addressing various aspects of secure and trustworthy AI systems. Topics of interest include, but are not limited to:</p>
-                
-                <div class="topics-grid">
-                    <div class="topic-item">
-                        <h4>Track 1: Foundations of Secure and Trustworthy AI</h4>
-                        <ul>
-                            <li>AI model verification, validation, and formal methods</li>
-                            <li>Secure AI lifecycle management and DevSecOps for ML</li>
-                            <li>Ethical frameworks, AI governance, and regulatory compliance</li>
-                            <li>Trust metrics and assessment methodologies for AI systems</li>
-                            <li>Certification and standardization of AI security practices</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 2: AI for Cybersecurity</h4>
-                        <ul>
-                            <li>Machine learning and deep learning for intrusion detection and prevention</li>
-                            <li>AI-driven threat intelligence and automated threat hunting</li>
-                            <li>Intelligent security incident response and digital forensics</li>
-                            <li>Anomaly detection in network traffic and system behavior</li>
-                            <li>AI-enhanced malware detection and classification</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 3: Cybersecurity for AI Systems</h4>
-                        <ul>
-                            <li>Adversarial machine learning and defense mechanisms</li>
-                            <li>Model theft, inversion, and membership inference attacks</li>
-                            <li>Data poisoning and backdoor attacks on AI systems</li>
-                            <li>Secure deployment of AI in cloud, edge, and IoT environments</li>
-                            <li>Privacy-preserving machine learning architectures</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 4: Detection and Mitigation of Deepfakes and Synthetic Media</h4>
-                        <ul>
-                            <li>Advanced deepfake generation and detection techniques</li>
-                            <li>Forensic analysis of manipulated multimedia content</li>
-                            <li>AI-powered disinformation detection and mitigation</li>
-                            <li>Social engineering threats amplified by synthetic media</li>
-                            <li>Legal and ethical implications of deepfake technology</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 5: Adversarial AI and Robust Machine Learning</h4>
-                        <ul>
-                            <li>Adversarial example generation and defense strategies</li>
-                            <li>Certified defenses and provable robustness guarantees</li>
-                            <li>Robustness testing and red-teaming methodologies</li>
-                            <li>Secure transfer learning and domain adaptation</li>
-                            <li>Federated learning security and privacy</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 6: Privacy-Preserving AI</h4>
-                        <ul>
-                            <li>Differential privacy in machine learning systems</li>
-                            <li>Secure multiparty computation for collaborative AI</li>
-                            <li>Homomorphic encryption for privacy-preserving inference</li>
-                            <li>Federated learning with privacy guarantees</li>
-                            <li>Synthetic data generation for privacy protection</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 7: Trust, Explainability, and Accountability in AI</h4>
-                        <ul>
-                            <li>Explainable AI for security-critical applications</li>
-                            <li>Interpretability techniques for black-box AI models</li>
-                            <li>Bias detection, fairness, and algorithmic accountability</li>
-                            <li>Human-AI interaction in security contexts</li>
-                            <li>Trust calibration and uncertainty quantification</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 8: AI in Critical Infrastructure Protection</h4>
-                        <ul>
-                            <li>AI applications in securing smart grids, healthcare, transport, and finance</li>
-                            <li>Cyber-physical security and AI-based industrial control protection</li>
-                            <li>AI resilience in emergency and disaster scenarios</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 9: AI and Post-Quantum Cybersecurity</h4>
-                        <ul>
-                            <li>Quantum-resistant cryptography for AI communications</li>
-                            <li>Quantum computing threats to current AI security</li>
-                            <li>Quantum machine learning and its security implications</li>
-                            <li>Quantum-enhanced cybersecurity protocols</li>
-                            <li>Post-quantum cryptographic implementations in AI systems</li>
-                        </ul>
-                    </div>
-                    <div class="topic-item">
-                        <h4>Track 10: Emerging Trends and Future Research in Secure AI</h4>
-                        <ul>
-                            <li>AI for cyber risk assessment and management</li>
-                            <li>Bio-inspired and neuromorphic security models</li>
-                            <li>Sustainable and green AI security frameworks</li>
-                            <li>AI ethics and responsible disclosure practices</li>
-                            <li>Future challenges in AI security and privacy</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <h3>Submission Guidelines</h3>
+               <section class="topics-section">
+  <div class="container">
+    <h3>Scope and Topics of Interest</h3>
+    <p>
+      We solicit high-quality original research papers, survey papers, and position papers addressing various aspects of secure and trustworthy AI systems. 
+      Topics of interest include, but are not limited to:
+    </p>
+
+    <div class="accordion">
+
+      <!-- Track 1 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 1: Foundations of Secure and Trustworthy AI</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>AI model verification, validation, and formal methods</li>
+            <li>Secure AI lifecycle management and DevSecOps for ML</li>
+            <li>Ethical frameworks, AI governance, and regulatory compliance</li>
+            <li>Trust metrics and assessment methodologies for AI systems</li>
+            <li>Certification and standardization of AI security practices</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 2 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 2: AI for Cybersecurity</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Machine learning and deep learning for intrusion detection and prevention</li>
+            <li>AI-driven threat intelligence and automated threat hunting</li>
+            <li>Intelligent security incident response and digital forensics</li>
+            <li>Anomaly detection in network traffic and system behavior</li>
+            <li>AI-enhanced malware detection and classification</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 3 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 3: Cybersecurity for AI Systems</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Adversarial machine learning and defense mechanisms</li>
+            <li>Model theft, inversion, and membership inference attacks</li>
+            <li>Data poisoning and backdoor attacks on AI systems</li>
+            <li>Secure deployment of AI in cloud, edge, and IoT environments</li>
+            <li>Privacy-preserving machine learning architectures</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 4 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 4: Detection and Mitigation of Deepfakes and Synthetic Media</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Advanced deepfake generation and detection techniques</li>
+            <li>Forensic analysis of manipulated multimedia content</li>
+            <li>AI-powered disinformation detection and mitigation</li>
+            <li>Social engineering threats amplified by synthetic media</li>
+            <li>Legal and ethical implications of deepfake technology</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 5 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 5: Adversarial AI and Robust Machine Learning</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Adversarial example generation and defense strategies</li>
+            <li>Certified defenses and provable robustness guarantees</li>
+            <li>Robustness testing and red-teaming methodologies</li>
+            <li>Secure transfer learning and domain adaptation</li>
+            <li>Federated learning security and privacy</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 6 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 6: Privacy-Preserving AI</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Differential privacy in machine learning systems</li>
+            <li>Secure multiparty computation for collaborative AI</li>
+            <li>Homomorphic encryption for privacy-preserving inference</li>
+            <li>Federated learning with privacy guarantees</li>
+            <li>Synthetic data generation for privacy protection</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 7 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 7: Trust, Explainability, and Accountability in AI</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Explainable AI for security-critical applications</li>
+            <li>Interpretability techniques for black-box AI models</li>
+            <li>Bias detection, fairness, and algorithmic accountability</li>
+            <li>Human-AI interaction in security contexts</li>
+            <li>Trust calibration and uncertainty quantification</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 8 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 8: AI in Critical Infrastructure Protection</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>AI applications in securing smart grids, healthcare, transport, and finance</li>
+            <li>Cyber-physical security and AI-based industrial control protection</li>
+            <li>AI resilience in emergency and disaster scenarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 9 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 9: AI and Post-Quantum Cybersecurity</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>Quantum-resistant cryptography for AI communications</li>
+            <li>Quantum computing threats to current AI security</li>
+            <li>Quantum machine learning and its security implications</li>
+            <li>Quantum-enhanced cybersecurity protocols</li>
+            <li>Post-quantum cryptographic implementations in AI systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Track 10 -->
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>Track 10: Emerging Trends and Future Research in Secure AI</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-body">
+          <ul>
+            <li>AI for cyber risk assessment and management</li>
+            <li>Bio-inspired and neuromorphic security models</li>
+            <li>Sustainable and green AI security frameworks</li>
+            <li>AI ethics and responsible disclosure practices</li>
+            <li>Future challenges in AI security and privacy</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="submission">
+                <h3 >Submission Guidelines</h3>
                 <p>Paper Categories:</p>
                 <ul>
                     <li><strong>Full Papers:</strong> Original research contributions (11-15 pages)</li>
@@ -299,9 +697,10 @@
                     <li><strong>Feedback provided:</strong> Detailed reviews will be provided to all authors</li>
                     <li><strong>Multiple review rounds:</strong> Selected papers may undergo revision cycles</li>
                 </ul>
+                </section>
                 
                 
-                
+                <section class="pub">
                 <h3>Publication and Indexing</h3>
                 <p>Accepted papers will be published in the Smart Innovation, Systems and Technologies series by Springer, ensuring wide dissemination and high visibility in the academic community. The proceedings will be indexed in major databases including:</p>
                 <ul>
@@ -338,11 +737,12 @@
                 <h3>Submission Instructions</h3>
                 <ol>
                     <li>Prepare your manuscript according to Springer formatting guidelines</li>
-                    <li>Submit through the conference portal (link to be announced)</li>
+                    <li>Submit through the conference portal</li>
                     <li>Ensure anonymity by removing author information from the submission</li>
                     <li>Include supplementary materials if applicable (datasets, code, etc.)</li>
                     <li>Confirm compliance with ethical guidelines and plagiarism policies</li>
                 </ol>
+                </section>
                 <div class="acknowledgment">
   <p>
     <strong>CMT ACKNOWLEDGMENT:</strong> The following acknowledgment must remain VISIBLE on your conference website, as well as the conference proceedings if applicable. Do not use any modifiers; keep it as plain text: <br><br>
@@ -424,6 +824,14 @@
     <a href="#" class="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </a>
+<script>
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const item = header.parentElement;
+      item.classList.toggle("active");
+    });
+  });
+</script>
 
     <!-- JavaScript Files -->
     <script src="../js/script.js"></script>
