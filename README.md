@@ -1,4 +1,4 @@
-ICSTAIS2026 Conference Website
+ICSTAIS2026 Conference Website: https://chandigarhuniv.github.io/ICSTAIS2026/index.html
 
 This is a complete standalone HTML/CSS/JS project for the International Conference on Secure and Trustworthy Artificial Intelligence Systems (ICSTAIS2026).
 
