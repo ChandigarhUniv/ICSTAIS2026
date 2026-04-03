@@ -15,51 +15,138 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+
+/* ===== PAYMENT PREMIUM UI ===== */
+
+
+.section-header h2 {
+    font-size: 34px;
+    color: #1e3c72;
+}
+
+.separator {
+    width: 80px;
+    height: 4px;
+    background: #2a5298;
+    margin: 10px auto 30px;
+    border-radius: 5px;
+}
+
+.payment-content {
+    background: #fff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* TABLE DESIGN */
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.registration-table thead {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+}
+
+.registration-table th,
+.registration-table td {
+    padding: 14px;
+    text-align: center;
+}
+
+.registration-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.registration-table tbody tr:hover {
+    background: #f1f6ff;
+    transform: scale(1.01);
+}
+
+/* COLOR DIFFERENCE */
+.registration-table tbody td:nth-child(2) {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.registration-table tbody td:nth-child(3) {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* NOTE BOX */
+.note-box {
+    background: #fff8e5;
+    border-left: 5px solid #ff9800;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* BUTTON */
+.pay-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #2a5298;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.pay-btn:hover {
+    background: #1e3c72;
+}
+
+</style>
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="top-bar-content">
-                    <div class="top-bar-content">
-         <div class="contact-info">
+   <header>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="contact-info">
           <span><i class="fas fa-envelope"></i> icstais@cumail.in</span>
           <span><i class="fas fa-calendar"></i> June 13 - 15, 2026</span>
         </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
-        
-        <div class="main-header">
-            <div class="container">
-                <div class="header-content">
-                    <!-- Logo Section -->
-                    <div class="logo-container">
-                        <div class="conference-logo">
-                            <img src="../assets/images/logos/conference-logo.png" alt="ICSTAIS2026 Logo" class="logo-img">
-                            <div class="logo-text">
-                                <h1>ICSTAIS2026</h1>
-                                <p>International Conference on Secure and Trustworthy Artificial Intelligence Systems</p>
-                            </div>
-                        </div>
-                        <div class="university-logos">
-                            <img src="../assets/images/logos/cu-logo.png" alt="Chandigarh University Logo" class="logo-img cu-logo">
-                             <!--<img src="../assets/images/logos/lnns.png" alt="SIST Logo" class="logo-img sist-logo">-->
-                            <!--<img src="../assets/images/logos/springer-logo.png" alt="Springer Logo" class="logo-img springer-logo">-->
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container header-content">
+        <div class="logo-container">
+          <div class="conference-logo">
+            <img src="../assets/images/logos/conference-logo.png"alt="ICSTAIS2026 Logo" class="logo-img">
+            <div class="logo-text">
+              <h1>ICSTAIS2026</h1>
+              <p>International Conference on Secure and Trustworthy Artificial Intelligence Systems</p>
             </div>
+          </div>
+          <div class="university-logos">
+            <img src="../assets/images/logos/cu-logo.png" alt="Chandigarh University Logo" class="logo-img cu-logo">
+            <img src="../assets/images/logos/Nova-Publishers.svg" alt="LNNS Logo" class="logo-img">
+            <!--<img src="assets/images/logos/springer-logo.png" alt="Springer Logo" class="logo-img springer-logo">-->
+          </div>
         </div>
-        
-        <!-- Navigation Menu -->
+      </div>
+    </div>
+
+    <!-- Navigation -->
     <nav class="navbar">
       <div class="container nav-content">
         <ul class="nav-menu">
@@ -71,11 +158,14 @@
               <li><a href="technical-program-committee.html">Technical Program Committee</a></li>
               <li><a href="international-advisory-committee.html">International Advisory Committee</a></li>
               <li><a href="national-advisory-committee.html">National Advisory Committee</a></li>
-              <li><a href="student.html">Student Volunteer Committee (TBA)</a></li>
+              <li><a href="all-pages.html">Other committees</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="speakers.html">Speakers <i class="fas fa-chevron-down"></i></a>
+            <li class="dropdown">
+              <a href="review.html">Reviewers<i class="fas fa-chevron-down"></i></a>
+            </li>
             <ul class="dropdown-menu">
               <li><a href="plenary.html">Plenary</a></li>
               <li><a href="keynote.html">Keynote</a></li>
@@ -89,6 +179,7 @@
             <ul class="dropdown-menu">
             <li><a href="registration.html">Registration</a></li>
             <li><a href="payment.html">Payment information</a></li>
+            <li><a href="payment-page.html">Payment Link</a></li>
             </ul>
             </li>
           <li class="dropdown">
@@ -96,9 +187,9 @@
             <ul class="dropdown-menu">
               <li><a href="call-for-paper.html">Call for Paper</a></li>
                <li><a href="callposter.html">Call for Posters</a></li>
-               <li><a href="callfordoc.html">Call for Doctoral Symposium</a></li>
+              
                 <li><a href="#">Call for Workshops</a></li>
-              <li><a href="callspecial.html">Call for Special Sessions</a></li>
+   
               <li><a href="callsponser.html">Call for Sponsorship</a></li>
               
             </ul>
@@ -133,111 +224,138 @@
       </div>
     </nav>
   </header>
-    
 <!-- ===== TICKER SECTION ===== -->
 <section class="ticker-section">
   <div class="ticker-wrap">
     <div class="ticker">
-      <a href="https://link.springer.com/series/15179">📢 Post Conference proceedings will be published in Scopus Indexed Journal</a>
+      <a >📢 Post Conference proceedings will be published in Scopus Indexed Journal</a>
 
     </div>
   </div>
 </section>
 
-
     <!-- Payment Section -->
-    <section class="payment-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Payment Information</h2>
-                <div class="separator"></div>
-            </div>
-            
-            <div class="payment-content">
-                <p>The registration fees for ICSTAIS2026 are as follows:</p>
-                
-                <h3>Registration Fees</h3>
-                <p>Note: Registration fee inclusive of 18% GST.</p>
-                
-                <h4>Conference Paper | Special Session Paper | Workshop</h4>
-                <table class="registration-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Early Registration (on or before 16 December 2025)</th>
-                            <th>Late Registration (After 16 December 2025)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Research Scholar/Student</td>
-                            <td>INR 6,000 / USD 120</td>
-                            <td>INR 7,000 / USD 130</td>
-                        </tr>
-                        <tr>
-                            <td>Academician</td>
-                            <td>INR 7,000 / USD 130</td>
-                            <td>INR 8,000 / USD 140</td>
-                        </tr>
-                        <tr>
-                            <td>Industry Paper</td>
-                            <td>INR 8,000 / USD 140</td>
-                            <td>INR 9,000 / USD 150</td>
-                        </tr>
-                        <tr>
-                            <td>Attendees/Participating</td>
-                            <td>INR 3,000 / USD 100</td>
-                            <td>Nil</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h4>Doctoral Symposium | Poster Presentation</h4>
-                <table class="registration-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Early Registration (on or before 16 December 2025)</th>
-                            <th>Late Registration (After 16 December 2025)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Research Scholar/Student</td>
-                            <td>INR 3,000 / USD 80</td>
-                            <td>INR 4,000 / USD 90</td>
-                        </tr>
-                        <tr>
-                            <td>Academician</td>
-                            <td>INR 4,000 / USD 100</td>
-                            <td>INR 5,000 / USD 100</td>
-                        </tr>
-                        <tr>
-                            <td>Attendees/Participating</td>
-                            <td>INR 3,000 / USD 100</td>
-                            <td>Nil</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>Payment Instructions</h3>
-                <p><strong>For Indian Delegates:</strong> Payment can be made through NEFT/RTGS. Details will be provided soon. Please check back for updates.</p>
-                
-                <p><strong>For Foreign Delegates:</strong> Payment can be made through SWIFT/Wire transfer. Details will be provided soon. Please check back for updates.</p>
+   <section class="payment-content">
 
-                <p><strong>Please Note:</strong> 
-Even if a manuscript has been registered and orally presented at the conference, Springer reserves the right to reject the paper at any stage upon submission to Springer. In such cases, no registration fee will be refunded. However, the conference authority will make every effort to facilitate publishing the paper in other Scopus Indexed Journals.</p>
-                
-                <div class="payment-contact">
-                    <h3>Contact for Payment Queries</h3>
-                    <p>If you have any questions regarding payment, please contact:</p>
-                    <p>Email: <a href="mailto:icstais@cumail.in">icstais@cumail.in</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+<p>The registration fees for ICSTAIS2026 are as follows:</p>
 
-    <!-- Footer Section -->
+<h3>Registration Fees</h3>
+<p><strong>Note:</strong> Registration fee inclusive of applicable GST.</p>
+
+<h4>Conference Paper | Special Session | Workshop (NOVA)</h4>
+<table class="registration-table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Early Registration (Before 30 May 2026)</th>
+<th>Late Registration (After 10 June 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Research Scholar / Student</td>
+<td>INR 7000</td>
+<td>INR 8000</td>
+</tr>
+<tr>
+<td>Academician</td>
+<td>INR 8000</td>
+<td>INR 9000</td>
+</tr>
+<tr>
+<td>Industrial Participants</td>
+<td>INR 10000</td>
+<td>INR 11000</td>
+</tr>
+<tr>
+<td>Foreigner Research Scholar / Student</td>
+<td>USD 200</td>
+<td>USD 250</td>
+</tr>
+<tr>
+<td>Foreigner Academician</td>
+<td>USD 250</td>
+<td>USD 300</td>
+</tr>
+<tr>
+<td>Foreigner Industrial Participant</td>
+<td>USD 300</td>
+<td>USD 350</td>
+</tr>
+</tbody>
+</table>
+
+<h4>Poster Paper Presentation</h4>
+<table class="registration-table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Early Registration (Before 30 May 2026)</th>
+<th>Late Registration (After 3 June 2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Research Scholar / Student</td>
+<td>INR 3000</td>
+<td>INR 4000</td>
+</tr>
+<tr>
+<td>Academician</td>
+<td>INR 4000</td>
+<td>INR 5000</td>
+</tr>
+<tr>
+<td>Industrial Participants</td>
+<td>INR 5000</td>
+<td>INR 6000</td>
+</tr>
+<tr>
+<td>Foreigner Research Scholar / Student</td>
+<td>USD 120</td>
+<td>USD 150</td>
+</tr>
+<tr>
+<td>Foreigner Academician</td>
+<td>USD 150</td>
+<td>USD 200</td>
+</tr>
+<tr>
+<td>Foreigner Industrial Participants</td>
+<td>USD 200</td>
+<td>USD 250</td>
+</tr>
+</tbody>
+</table>
+
+<!-- BUTTON -->
+<a href="payment-page.html" class="pay-btn">
+<i class="fas fa-credit-card"></i> Proceed to Payment
+</a>
+
+<!-- PAYMENT INSTRUCTIONS -->
+<h3>Payment Instructions</h3>
+
+<p><strong>For Indian Delegates:</strong> Payment can be made through NEFT/RTGS. Bank details will be provided soon.</p>
+
+<p><strong>For Foreign Delegates:</strong> Payment can be made through SWIFT/Wire transfer. Details will be shared soon.</p>
+
+<!-- NOTE BOX -->
+<div class="note-box">
+<strong>Important Note:</strong><br>
+Even if a manuscript has been registered and presented, the publisher reserves the right to reject the paper at any stage. In such cases, the registration fee will not be refunded. However, the conference committee will assist in alternative Scopus-indexed publication opportunities.
+</div>
+
+<!-- CONTACT -->
+<div class="payment-contact">
+<h3>Contact for Payment Queries</h3>
+<p>If you have any questions regarding payment, please contact:</p>
+<p>Email: <a href="mailto:icstais@cumail.in">icstais@cumail.in</a></p>
+</div>
+
+</section>
+
+       <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -254,13 +372,13 @@ Even if a manuscript has been registered and orally presented at the conference,
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-               <div class="footer-column">
+                <div class="footer-column">
         <h3>Important Dates</h3>
         <ul>
-          <li>Submission: March 15, 2026</li>
-          <li>Acceptance: May 1, 2026</li>
-          <li>Camera Ready: May 31, 2026</li>
-          <li>Conference: June 13 – 15, 2026</li>
+          <li>Submission: May 10, 2026</li>
+          <li>Acceptance: May 25, 2026</li>
+          <li>Camera Ready: May 30, 2026</li>
+          <li>Conference: June 12 – 13, 2026</li>
         </ul>
       </div>
                 <div class="footer-column">
@@ -289,8 +407,8 @@ Even if a manuscript has been registered and orally presented at the conference,
                 <p>&copy; 2025 International Conference on Secure and Trustworthy Artificial Intelligence Systems (ICSTAIS2026). All Rights Reserved.</p>
                 <div class="footer-logos">
                     <img src="../assets/images/logos/cu-logo.png" alt="Chandigarh University Logo">
-                     <!--<img src="../assets/images/logos/lnns.png" alt="SIST Logo">-->
-                   <!-- <img src="../assets/images/logos/springer-logo.png" alt="Springer Logo">-->
+                     <img src="../assets/images/logos/Nova-Publishers.svg" alt=" Logo">
+                    <!--<img src="../assets/images/logos/springer-logo.png" alt="Springer Logo">-->
                 </div>
             </div>
         </div>

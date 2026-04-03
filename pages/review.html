@@ -1,22 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Advisory Committee - ICSTAIS2026</title>
-    <meta name="description" content="International Advisory Committee for ICSTAIS2026 - International Conference on Secure and Trustworthy Artificial Intelligence Systems">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="../css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reviewers - ICSTAIS2026</title>
+<link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+}
+
+/* HEADER */
+.header {
+    background: #1e3c72;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* TITLE */
+.section {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.section h1 {
+    color: #1e3c72;
+}
+
+/* TABLE CONTAINER */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0 50px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* HEAD */
+thead {
+    background: #2a5298;
+    color: white;
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    font-weight: 600;
+}
+
+/* ROWS */
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #f1f5ff;
+}
+
+/* EMAIL */
+.email {
+    color: #2a5298;
+    font-size: 13px;
+}
+
+/* AFFILIATION */
+.affiliation {
+    font-size: 13px;
+    color: #555;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    background: #1e3c72;
+    color: #fff;
+    padding: 15px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    td::before {
+        font-weight: bold;
+        display: block;
+        color: #1e3c72;
+    }
+
+    td:nth-child(1)::before { content: "Name"; }
+    td:nth-child(2)::before { content: "Email"; }
+    td:nth-child(3)::before { content: "Affiliation"; }
+}
+</style>
 </head>
+
 <body>
+
+     <!-- Header Section -->
   <header>
     <!-- Top Bar -->
     <div class="top-bar">
@@ -141,61 +263,73 @@
     </div>
   </div>
 </section>
-    <!-- IAC Section -->
-    <section class="committee-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>International Advisory Committee</h2>
-                <div class="separator"></div>
-            </div>
-            
-            <div class="committee-content">
-                <div class="committee-item">
-                    <p>Richard M. Aborn, President, Citizens Crime Commission of New York City; and Managing Partner, Constantine Cannon</p>
-                    <p>Chris Ante, MITRE</p>
-                    <p>Russ Ayres, Deputy CISO, Head of Cyber, Equifax</p>
-                    <p>Geoff Brown, CEO Silobreaker</p>
-                    <p>Harold Chun, Director of Security Legal, Google</p>
-                    <p>Anthony J. Ferrante, Global Head of Cybersecurity & Senior Managing Director, FTI Consulting</p>
-                    <p>Cassady "Cass" Gaier, Virtual Currency Technical Advisor, New York State Department of Financial Services</p>
-                    <p>Karen Greenberg, Director, Center on National Security, Fordham Law School</p>
-                    <p>Thaier Hayajneh, University Professor; Director, Fordham Center for Cybersecurity & AI, Fordham University</p>
-                    <p>Steve Hill, Independent Board Adviser, PwC UK</p>
-                    <p>Frank Hsu, Clavius Distinguished Professor, Fordham University Department of Computer and Information Sciences</p>
-                    <p>Rob Joyce, Owner, Joyce Cyber LLC</p>
-                    <p>Dr. Peyman Teymoori, Professor in Computer Science, University of South Eastern Norway</p>
-                    <p>Dr. Toktam Ramezanifarkhani, Associate Professor, Kristiana University, Norway</p>
-                    <p>Dr. Prahalad Vadakkepat, Associate Professor, National University of Singapore</p>
-                    <p>Amit Kachhia-Patel, Supervisory Special Agent, FBI</p>
-                    <p>Jordan Rae Kelly, Senior Managing Director and Head of Cybersecurity for the Americas, FTI Consulting</p>
-                    <p>Dorothy Marinucci, University Secretary, Fordham University</p>
-                    <p>Peter Marta, Partner, Goodwin Procter, LLP</p>
-                    <p>Koji Nakao, Distinguished Researcher, National Institute of Information and Communications Technology (NICT)</p>
-                    <p>Barbara M. Porco, Clinical Professor and Associate Dean of Graduate Studies, Fordham University Gabelli School of Business</p>
-                    <p>Margot Scanlon '22, Supervisory Special Agent, FBI New York</p>
-                    <p>Darron Smith, Insider Threat Program Manager, Bloomberg, LP</p>
-                    <p>Edward M. Stroz, Co-Founder, Consilience 360, LLC</p>
-                    <p>Jason Truppi, Co-Founder, ForceMetrics</p>
-                    <p>Carl S. Young, Co-Founder, Consilience 360, LLC</p>
-                    <p>Spero Zacharias, Senior Vice President, Global Technology Major Initiatives, Chubb</p>
-                    <p>Advait Patel, Broadcom, USA</p>
-                    <p>Bhushan Chavan, Director of engineering Identity access management at MRI, USA</p>
-                    <p>Aisha Junejo, School of Computer Science and Mathematics, Keele University, UK</p>
-                    <p>Aitolkyn Kulmuratova, Astana IT University, Kazakhstan</p>
-                    <p>R K Mishra, De Montfort University (DMU), Kazakhstan</p>
-                    <p>Ademi Ospanova, Eurasian National University, Kazakhstan</p>
-                    <p>Rajina Binti M A Raj Mohamed, Universiti Tenaga Nasional (UNITEN), Malaysia</p>
-                    <p>Ulises Roman Concha, National University of San Marcos, Peru</p>
-                    <p>Shiladitya Das Sharma, Amazon Web Service, USA</p>
-                    <p>Ganga Ram MISHRA, Dr RML Avadh University, Ayodhya, India</p>
-                    <p>Hassan II of Casablanca, Morocco</p>
-                    <p>Preeta Sharan, The Oxford College of Engineering, Bangalore, Karnataka, India</p>
-                    <p>Milankumar Rana, Sr Cloud Engineer, FedEx, Plano, USA</p>
-                    <p>Nandita Giri, Software Engineer, Microsoft, USA</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
+<section class="section">
+<h1>Reviewers / TPC Members</h1>
+<p>International experts contributing to peer-review and academic excellence</p>
+</section>
+
+<div class="container">
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Affiliation</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td>Satyam Nikhra</td><td class="email">nikhrasatyam@gmail.com</td><td class="affiliation">Earnest, San Francisco, USA</td></tr>
+<tr><td>Anand Singh</td><td class="email">anandec21@gmail.com</td><td class="affiliation">AbbVie Inc.</td></tr>
+<tr><td>Amit Prasad</td><td class="email">amit.prasad@ieee.org</td><td class="affiliation">Tata Consultancy Services, USA</td></tr>
+<tr><td>Harvendra Singh</td><td class="email">harvendra.singh@ieee.org</td><td class="affiliation">IEEE Senior Member</td></tr>
+<tr><td>Jay Bharat Mehta</td><td class="email">jaymehta9892@gmail.com</td><td class="affiliation">Snowflake</td></tr>
+<tr><td>Rajkumar Kuppuswami</td><td class="email">rajk2888@gmail.com</td><td class="affiliation">Applied Materials</td></tr>
+<tr><td>Nirmal Jingar</td><td class="email">nirmal.jingar@gmail.com</td><td class="affiliation">Wayfair</td></tr>
+<tr><td>Venkata Swamy Madasi</td><td class="email">mvenkatas6@gmail.com</td><td class="affiliation">Mphasis</td></tr>
+<tr><td>Raghavendar Tadpatri</td><td class="email">raghavendar.t@gmail.com</td><td class="affiliation">Cognizant, USA</td></tr>
+<tr><td>Maulik Bhatt</td><td class="email">bhattmaulik1991@gmail.com</td><td class="affiliation">Amazon Web Services, USA</td></tr>
+<tr><td>Arpit Garg</td><td class="email">arpitgarg01@gmail.com</td><td class="affiliation">CGI, USA</td></tr>
+<tr><td>Neha Garg</td><td class="email">nehagarg.us@gmail.com</td><td class="affiliation">Zoox, USA</td></tr>
+<tr><td>Krishnaveni Musku</td><td class="email">krishna.musku0203@gmail.com</td><td class="affiliation">Absolute Assistance</td></tr>
+<tr><td>Mugunth Chandran</td><td class="email">mugunth.visa@gmail.com</td><td class="affiliation">Dish Network Corp</td></tr>
+<tr><td>Kavitha Thiyagarajan</td><td class="email">catch.kavi@gmail.com</td><td class="affiliation">Santander Group</td></tr>
+<tr><td>Ramesh Somayajula</td><td class="email">rams.somayajula.1983@gmail.com</td><td class="affiliation">T-Mobile US Inc</td></tr>
+<tr><td>Seshendra Balla</td><td class="email">seshendra.ballaven@gmail.com</td><td class="affiliation">COMCAST Denver, CO</td></tr>
+<tr><td>Charan Thumma</td><td class="email">charan.thumma@gmail.com</td><td class="affiliation">Cisco</td></tr>
+<tr><td>Chaitanya Tumma</td><td class="email">chaitanyatumma1@gmail.com</td><td class="affiliation">University of the Cumberlands</td></tr>
+<tr><td>Sangeetha Mandapaka</td><td class="email">Sangeetha.m@msr-it.com</td><td class="affiliation">MSR Technology Group, USA</td></tr>
+<tr><td>Vinodh Gunasekaran</td><td class="email">Vinoalles@gmail.com</td><td class="affiliation">Circana, USA</td></tr>
+<tr><td>Deepika Paturu</td><td class="email">deepikapaturu565@gmail.com</td><td class="affiliation">SAP Enterprises, USA</td></tr>
+<tr><td>Mallikharjuna Rakesh Manepalli</td><td class="email">mallikharjunamanepalli@gmail.com</td><td class="affiliation">Raymond James</td></tr>
+<tr><td>Naga Bharadwaj Bhavikatta</td><td class="email">nagabn12@gmail.com</td><td class="affiliation">Oracle USA</td></tr>
+<tr><td>Suresh Kurapati</td><td class="email">sureshkurapati12345@gmail.com</td><td class="affiliation">Boeing</td></tr>
+<tr><td>Pramod Halapeti</td><td class="email">halapeti284@gmail.com</td><td class="affiliation">Amazon Web Services, USA</td></tr>
+<tr><td>Dhairya Bimal Chandarana</td><td class="email">dhairyabimal@gmail.com</td><td class="affiliation">Vanguard</td></tr>
+<tr><td>Sibaram Prasad Panda</td><td class="email">spsiba07@gmail.com</td><td class="affiliation">Decision Ready Solutions, USA</td></tr>
+<tr><td>Raghab Singh</td><td class="email">raghabsingh99@gmail.com</td><td class="affiliation">University of South Dakota</td></tr>
+<tr><td>Nanda Gopal Parise</td><td class="email">nandagopalparise@gmail.com</td><td class="affiliation">Charles Schwab, USA</td></tr>
+<tr><td>Sowjanya Karri</td><td class="email">karrisowjanya.cse@gmail.com</td><td class="affiliation">Oracle Corporation</td></tr>
+<tr><td>Rajaganapathi Rangdale Srinivasa Rao</td><td class="email">rajaganapathi001@gmail.com</td><td class="affiliation">Illumina, USA</td></tr>
+<tr><td>Akshay Sharma</td><td class="email">akshay.sharma@ieee.org</td><td class="affiliation">PRS</td></tr>
+<tr><td>Anup Kagalkar</td><td class="email">anupkagalkar+cmt@gmail.com</td><td class="affiliation">Sagitec Solutions</td></tr>
+<tr><td>Ravi Jindal</td><td class="email">ravi.23189@gmail.com</td><td class="affiliation">DocuSign, USA</td></tr>
+<tr><td>Nilesh Bhandarwar</td><td class="email">nileshbhandarwar.work@gmail.com</td><td class="affiliation">Microsoft, USA</td></tr>
+<tr><td>Abhi Desai</td><td class="email">desai.abhi904@gmail.com</td><td class="affiliation">Pace University, USA</td></tr>
+<tr><td>Sapan Pandya</td><td class="email">contact.sapan.pandya@gmail.com</td><td class="affiliation">Fanatics Inc, USA</td></tr>
+<tr><td>Monu Sharma</td><td class="email">Monu.Sharma@ieee.org</td><td class="affiliation">Valley Health System, USA</td></tr>
+<tr><td>Bhakti Hinduja</td><td class="email">bhakti.hinduja92@gmail.com</td><td class="affiliation">Ampere, USA</td></tr>
+<tr><td>Viraj Soni</td><td class="email">virajsoni@mail.com</td><td class="affiliation">Merrick Bank, USA</td></tr>
+<tr><td>Hari Rowtu</td><td class="email">harirowtu@ieee.org</td><td class="affiliation">Futurality, USA</td></tr>
+
+</tbody>
+</table>
+
+</div>
+
 
       <!-- Footer Section -->
     <footer class="footer">
@@ -256,12 +390,5 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript Files -->
-    <script src="../js/script.js"></script>
 </body>
 </html>
